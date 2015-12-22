@@ -1,0 +1,26 @@
+<br>
+<br>
+<br>
+<br>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+
+<a ng-href="#/car" class="btn btn-primary">Add Car</a>
+
+<div class="table-responsive">
+    <br>
+    <table class="table table-hover">
+        <tr>
+            <th>License Plate</th>
+            <th>Checkin</th>
+            <th>Checkout</th>
+
+            <th class="text-center">Action</th>
+        </tr>
+        <tr ng-repeat= "car in cars | filter: filtro">
+            <td>{{car.license_plate}}</a></td>
+            <td>{{car.checkin}}</td>
+            <td>{{car.checkout}}</td>
+            <td class="text-center"><a ng-href="#/car/{{car._id}}">List</a></td>
+        </tr>
+    </table>
+</div>
